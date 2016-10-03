@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/styleform.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jsbootstrap.js"></script>
+  </head>
+<body>
+
+ <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
+            <legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a> Sign up!</legend>
+         <form action="test.jsp" method="post" class="form" name='myForm'role="form" onsubmit='return validateForm()'>
+            <div class="row">
+                <div class="col-xs-5 col-md-5">
+                    <input class="form-control" id="idtxtname" name="dname" placeholder="First Name" type="text"
+                         autofocus onKeyUp = "autoCheckname();"/>
+                         
+                </div>
+                <div class="col-xs-1 col-md-1">
+                    <p id="ckname"></p>
+                </div>
+                <div class="col-xs-5 col-md-5">
+                    <input class="form-control" name="dlastname" placeholder="Last Name" type="text"  onKeyUp = "autoChecklastname();"/>                    
+                </div>
+                <div class="col-xs-1 col-md-1">
+                    <p id="cklastname"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-11 col-md-11">
+                    <input class="form-control" name="demail" placeholder="Your Email" type="text" onKeyUp = "autoCheckemail();"/>
+                </div>
+                <div class="col-xs-1 col-md-1">
+                    <p id="ckemail"></p>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-xs-11 col-md-11">
+                     <input class="form-control" name="dpass" placeholder="Your Password" type="password" onKeyUp = "autoCheckpass();"/>
+                </div>
+                <div class="col-xs-1 col-md-1">
+                    <p id="ckpass"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-11 col-md-11">
+                     <input class="form-control" name="drtpass" placeholder="Return Password" type="password" onKeyUp = "autoCheckRtpass();"/>
+                </div>
+                <div class="col-xs-1 col-md-1">
+                    <p id="ckRtpass"></p>
+                </div>
+             </div>
+            
+<!--sdaasdsadsadasd
+            <label for="">
+                Birth Date</label>
+            <div class="row">
+                <div class="col-xs-4 col-md-4">
+                    <select class="form-control">
+                        <option value="Month">Month</option>
+                    </select>
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <select class="form-control">
+                        <option value="Day">Day</option>
+                    </select>
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <select class="form-control">
+                        <option value="Year">Year</option>
+                    </select>
+                </div>
+            </div>
+-->
+            <label class="radio-inline">
+                <input type="radio" name="sex" id="idmale" value="male" />
+                Male
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="sex" id="idfemale" value="female" />
+                Female
+            </label>            
+            <br />
+<!--------------------------------------------------------------------->
+               <div class="row">
+                <div class="col-xs-11 col-md-11">
+                     <div class="form-group">
+                  <label for="sel1"></label>
+                      <select class="form-control" id="sel1" name="slCountry" onKeyUp = "autoCheckCountry();">
+                        <option value="" disabled
+                        ="disabled" selected="selected">Please select your country</option>
+                        <option value="1">Viet Nam</option>
+                        <option value="2">America</option>
+                        <option value="3">England</option>
+                        <option value="4">Germany</option>
+                        <option value="5">Singapor</option>
+                      </select>
+                </div>
+                </div>
+                <div class="col-xs-1 col-md-1">
+                    <p id="ckCountry"></p>
+                </div>
+            </div>
+                 
+
+<!--------------------------------------------------------------------->
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                Sign up</button>
+            </form>
+<!-- open display-->
+            <p id='nameinfo'></p>
+            <p id='emailinfo'></p>
+            <p id='genderinfo'></p>
+<!-- close display-->
+           
+            
+        </div>
+    </div>
+</div>
+   
+</body>
+</html>
